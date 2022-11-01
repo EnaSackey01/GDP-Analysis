@@ -14,7 +14,7 @@ def get_highest_gdp(data, year):
                 highest_gdp = value
                 state= gdp["GeoName"]
         #return state
-        return state
+        return "Highest GDP State"+" - "+state
 
 
 def get_lowest_gdp(data, year):
@@ -32,22 +32,22 @@ def get_lowest_gdp(data, year):
                 lowest_gdp = value
                 state= gdp["GeoName"]
         #return state
-        return state
+        return "Lowest GDP Stats"+" - "+state
 
 def get_state_gdp(data, state, year):
         for row in data:
             if row ["GeoName"]==state:
-                return row[year]
+                return row["GeoName"]+" - "+row[year]
 
 def get_all_states_gdp(data, year):
     state = ["Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
     for name in state:
         for row in data:
             if row["GeoName"]==name:
-                print(float(row[year]))
+                print(row["GeoName"],"-",float(row[year]))
 
 
-# save each row into a list (TODO: change to your path!)
+# save each row into a list 
 list_data = []
 with open("state_gdp_analysis.csv", "r") as infile:
     # load in data as DictReader
