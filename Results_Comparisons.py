@@ -32,5 +32,7 @@ for name in state:
     dif=twenty-nineteen
     if dif<0:
         print("There was a drop in "+name+" GDP by"+" "+str(abs(dif)))
+        print("There was a "+str(abs(dif))+" drop in "+name+"'s GDP ")
     else:
-        print("There was an rise in "+name+" GDP by"+" "+str(abs(dif)))
+        print("There was a rise in "+name+" GDP by"+" "+str(abs(dif)))
+        print("There was a "+str(abs(dif))+" rise in "+name+"'s GDP ")
