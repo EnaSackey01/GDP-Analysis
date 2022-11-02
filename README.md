@@ -1,7 +1,6 @@
 # GDP_Analysis
 
 A repository analysis gdp of each US State in a particulat year
-
 This repository also includes the functions
 
 
@@ -24,24 +23,17 @@ This file holds data comparisons between 2 varying years of GDP values for a par
 
 We can see here that New York experienced a drop in GDP from 2019 to 2020? Informally, a few changed which could have caused this shift could have been due to the pandemic, a drop in employment rate, a drop in annual household income, or a combination of all three and more.
 
-
+In addition to this info tdata is provided for each states GDP status over the 2 varying years to calculate whethere there was a rise or drop in GDP value. Indicating which states might have suffered or thrived during the pandemic.
 
 
 ## Challenge 1
 
-A csv file representing which state had the highest GDP for each year.
+This file contains:
 
-We will create our list of years using the following line of code:
+The code to create a CSV file `highest_gdp.csv`representative of the state with the highest GDP for each year.
 
-python
-years = [str(year) for year in range(1997, 2021)]
+The code to create a CSV file `lowest_gdp.csv`representative of the state with the lowest GDP for each year.
 
-
-For validation, your csv file should look like the attached `highest_gdp.csv` file.
-
-You will also create a csv file that describes which state had the lowest GDP for each year.
-
-For validation, your csv file should look like the attached `lowest_gdp.csv` file.
 
 ## Challenge 2
 Create a function called `get_percent_change` that calculates the [percent change](https://www.investopedia.com/terms/p/percentage-change.asp) of a specific state from one year to another. 
@@ -52,4 +44,5 @@ Create a function called `get_percent_change` that calculates the [percent chang
     Feel free to utilize `get_state_gdp()`
 
 We will use this function to create a csv file of percent changes from 2019 to 2020 for each state.
+  
   
