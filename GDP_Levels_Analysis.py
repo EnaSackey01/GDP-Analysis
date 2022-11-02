@@ -37,14 +37,14 @@ def get_lowest_gdp(data, year):
 def get_state_gdp(data, state, year):
         for row in data:
             if row ["GeoName"]==state:
-                return row["GeoName"]+" - "+row[year]
+                return row["GeoName"]+"'s GDP - "+row[year]
 
 def get_all_states_gdp(data, year):
     state = ["Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
     for name in state:
         for row in data:
             if row["GeoName"]==name:
-                print(row["GeoName"],"-",float(row[year]))
+                print(row["GeoName"]+"'s GDP -",float(row[year]))
 
 
 # save each row into a list 
