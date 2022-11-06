@@ -34,6 +34,13 @@ def get_lowest_gdp(data, year):
         #return state
         return state
 
+
+def get_state_gdp(data, state, year):
+        for row in data:
+            if row ["GeoName"]==state:
+                return row[year]
+
+
 # save each row into a list 
 list_data = []
 with open("state_gdp_analysis.csv", "r") as infile:
@@ -43,26 +50,25 @@ with open("state_gdp_analysis.csv", "r") as infile:
     for row in reader:
         list_data.append(row)
 
-years = [str(year) for year in range(1997, 2021)]
-Highest_States=[]
-for year in years:
-    state=get_highest_gdp(list_data, year)
-    Highest_States.append(state)
-with open("highest_gdp.csv", "w") as outfile:
-    # load in data as DictReader
-    writer = csv.writer(outfile)
-  
-    writer.writerow(years)
-    writer.writerow(Highest_States)
+# get highest gdp for 2020 using "get_highest_gdp(list_data, '2020')"
+print(get_highest_gdp(list_data, '2020'))
 
-years = [str(year) for year in range(1997, 2021)]
-Lowest_States=[]
-for year in years:
-    state=get_lowest_gdp(list_data, year)
-    Lowest_States.append(state)
-with open("lowest_gdp.csv", "w") as outfile:
-    # load in data as DictReader
-    writer = csv.writer(outfile)
-  
-    writer.writerow(years)
-    writer.writerow(Lowest_States)
+# get lowest gdp for 2020 using "get_lowest_gdp(list_data, '2020')"
+print(get_lowest_gdp(list_data, '2020'))
+
+
+
+x = get_state_gdp(list_data, "New York", "2020")
+y = get_state_gdp(list_data, "New York", "2019")
+
+print(x, y)
+
+def get_percent_change(state, year1, year2):
+    old = float(get_state_gdp(list_data, state, year1))
+    new = float(get_state_gdp(list_data, state, year2))
+
+    perc_change = ((old - new)/old) *100
+    return str(perc_change) +"%"
+
+#print(float(x) - float(y))
+print(get_percent_change("New York", "2020", "2019"))
