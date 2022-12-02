@@ -31,13 +31,6 @@ In addition to this info tdata is provided for each states GDP status over the 2
 This file contains the code to create  CSV files `highest_gdp.csv` & `lowest_gdp.csv` representative of the state with the highest & lowest GDP for each year.
 
 ## Challenge 2
-Create a function called `get_percent_change` that calculates the [percent change](https://www.investopedia.com/terms/p/percentage-change.asp) of a specific state from one year to another. 
-
-`def get_percent_change(state, year1, year2):`
-    This function will get the percent change of gdp for a specific state from one specific year `year1`, to another `year2`.
-
-    Feel free to utilize `get_state_gdp()`
-
-We will use this function to create a csv file of percent changes from 2019 to 2020 for each state.
+This file creates a function called `get_percent_change` that calculates the [percent change]from 2019 to 2020 for each state.
   
   
