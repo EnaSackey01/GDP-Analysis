@@ -28,9 +28,9 @@ In addition to this info tdata is provided for each states GDP status over the 2
 
 ## Challenge 1
 
-This file contains the code to create  CSV files `highest_gdp.csv` & `lowest_gdp.csv` representative of the state with the highest & lowest GDP for each year.
+This file contains the code to create a CSV files `highest_gdp.csv` & `lowest_gdp.csv` representative of the state with the highest & lowest GDP for each year.
 
 ## Challenge 2
-This file creates a function called `get_percent_change` that calculates the [percent change]from 2019 to 2020 for each state.
+This file contains code to create a CSV file "Results_Comparisons.py". Within the code we have a function called `get_percent_change` that calculates the [percent change]from 2019 to 2020 for each state.
   
   
