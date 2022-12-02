@@ -28,12 +28,7 @@ In addition to this info tdata is provided for each states GDP status over the 2
 
 ## Challenge 1
 
-This file contains:
-
-The code to create a CSV file `highest_gdp.csv`representative of the state with the highest GDP for each year.
-
-The code to create a CSV file `lowest_gdp.csv`representative of the state with the lowest GDP for each year.
-
+This file contains the code to create  CSV files `highest_gdp.csv` & `lowest_gdp.csv` representative of the state with the highest & lowest GDP for each year.
 
 ## Challenge 2
 Create a function called `get_percent_change` that calculates the [percent change](https://www.investopedia.com/terms/p/percentage-change.asp) of a specific state from one year to another. 
